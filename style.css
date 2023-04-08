@@ -17,9 +17,9 @@ body {
 
 /* navbar */
 
-header {
+/* header {
   min-width: 1834px;
-}
+} */
 
 .container-fluid {
   align-items: center;
@@ -32,7 +32,6 @@ header {
 .nav-link:hover {
   color: rgb(136, 197, 240) !important;
 }
-
 
 .navbar-brand {
   font-family: 'Cyberpunk Is Not Dead', sans-serif;
@@ -127,9 +126,9 @@ header {
   background-size: cover;
   background-position: center;
   margin-right: 10px;
-  margin-left: 100px;
+  margin-left: 70px;
   height: 20vw;
-  width: 90vw;
+  width: 50vw;
   transform: translate(-50, -50);
   animation: animação-distorção 20s linear infinite;
 }
