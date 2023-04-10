@@ -7,6 +7,37 @@
   src: url('fonts/PressStart2P-Regular.ttf') format('truetype');
 }
 
+/* para o Firefox */
+/* define a largura da scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #ff5f6d #ffc371;
+  /* cor do thumb e do fundo da track */
+  /* background-clip: padding-box; para não interferir na borda arredondada */
+}
+
+/* para todos os navegadores */
+::-webkit-scrollbar {
+  width: 12px;
+  /* largura da scrollbar */
+  border-radius: 10px;
+  /* borda arredondada */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* cor do fundo da track */
+  border-radius: 10px;
+  /* borda arredondada */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ffffff, #537e89);
+  /* gradiente de cores */
+  border-radius: 10px;
+  /* borda arredondada */
+}
+
 body {
   background-color: #212529 !important;
   color: white !important;
@@ -14,12 +45,6 @@ body {
   min-height: 100vh;
   padding-bottom: 100px;
 }
-
-/* navbar */
-
-/* header {
-  min-width: 1834px;
-} */
 
 .container-fluid {
   align-items: center;
@@ -98,18 +123,18 @@ body {
 }
 
 /* hero */
-
-.hero-title::after {
-  content: "";
-  border-right: 1px solid rgb(255, 255, 255);
-  margin-left: 30px;
-  padding-top: 150px;
-  padding-bottom: 70px;
-}
-
 .hero-title {
   font-family: 'Cyberpunk Is Not Dead', sans-serif;
+  border-right: 0.4px solid white;
+  height: 17rem;
+  width: 60rem;
+  display: flex;
+  align-items: center;
 }
+
+
+
+
 
 .hero-image {
   border-radius: 15px;
@@ -129,7 +154,6 @@ body {
   margin-left: 70px;
   height: 20vw;
   width: 50vw;
-  transform: translate(-50, -50);
   animation: animação-distorção 20s linear infinite;
 }
 
@@ -165,7 +189,7 @@ body {
 
 #hero h1 {
   font-size: 60px;
-  margin-right: 100px;
+  margin: 0 100px 0 0px;
 }
 
 .row h4 {
@@ -199,7 +223,6 @@ body {
 .carrossel {
   padding-top: 100px;
   padding-bottom: 200px;
-  min-width: 1000px;
   padding-right: 300px;
   padding-left: 300px;
   display: flex;
@@ -215,7 +238,7 @@ body {
 .slide-img {
   border-radius: 50px;
   transition: all 0.2s ease-in-out;
-  filter: blur(2px);
+  filter: blur(4px);
 }
 
 .carrossel img:hover {
@@ -227,7 +250,8 @@ body {
 }
 
 .carousel-item img {
-  height: 500px;
+  width: auto;
+  height: 45vh
 }
 
 /* snake-btn */
@@ -454,16 +478,21 @@ footer {
   height: 25px;
 }
 
-.py-md-5 {
-  background-color: rgb(65, 31, 102);
+.footer-container {
+  background-color: #367ca5;
 }
 
-.lista li {
+.footer {
+  background-color: #367ca5;
+  box-shadow: 0px -2px 12px 0px #222222;
+}
+
+.footer-lista li {
   margin-left: none;
   margin-right: auto;
 }
 
-.lista {
+.footer-lista {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -471,7 +500,7 @@ footer {
   list-style: none;
 }
 
-.lista img {
+.footer-lista img {
   filter: invert(1);
   width: 20px;
   margin-bottom: 4px;
@@ -479,8 +508,10 @@ footer {
 
 /* intuito.html */
 .my-column {
-  max-width: 100px; /* largura máxima da coluna */
-  margin: 0 auto; /* centraliza a coluna na página */
+  max-width: 100px;
+  /* largura máxima da coluna */
+  margin: 0 auto;
+  /* centraliza a coluna na página */
 }
 
 .container h5 {
@@ -491,14 +522,73 @@ footer {
   margin-top: 100px !important;
 }
 
-/* linha horizontal */
+@media screen and (max-width: 768px) {
 
-/* .line {
-    background-image: linear-gradient(to right, #f00, rgb(109, 0, 217), rgb(0, 179, 255));
-    border-top: none solid;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    padding-bottom: 4px;
-    top: calc(75% - 1px);
-} */
+  .footer-lista {
+    display: flex;
+    font-size: small;
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .footer-lista img {
+    width: 10px;
+  }
+
+  #hero {
+    display: flex;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .hero-title {
+    border-bottom: 0.4px solid white;
+    border-right: none;
+    height: 10rem;
+    width: 30rem;
+    display: flex;
+    align-items: center;
+  }
+
+  #hero h1 {
+    font-size: 60px;
+    margin: 0 0 100px 0px;
+  }
+
+  .hero-lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .distorção-borda {
+    height: 30vw;
+    width: 32vw;
+    margin: 0;
+  }
+
+  .carousel-item img {
+    height: 42vh;
+  }
+
+  .carrossel {
+    padding-top: 100px;
+    padding-bottom: 200px;
+    display: flex;
+    align-items: center;
+    padding: 50px 0 200px 0;
+    flex-direction: column;
+  }
+
+  .carousel-item img {
+    width: 30vh !important;
+    height: 33vh
+  }
+
+}
