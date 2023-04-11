@@ -1,2 +1,2 @@
-# Portifolio
-Eu decidi criar um portfólio para demonstrar minhas habilidades e compartilhar  projetos com outras pessoas.
+# Portfolio
+I have decided to create a portfolio to showcase my skills and share projects with others.
