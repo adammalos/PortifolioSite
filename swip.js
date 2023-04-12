@@ -1,3 +1,4 @@
+import Hammer from 'hammerjs';
 $(document).ready(function(){
   var myCarousel = document.querySelector('#carouselExample');
   var hammer = new Hammer(myCarousel);
@@ -10,5 +11,3 @@ $(document).ready(function(){
     $('#carouselExample').carousel('prev');
   });
 });
-
-

@@ -259,9 +259,8 @@ body {
 }
 
 .carousel-item img {
-  height: auto;
-  min-width: 400px;
-  min-height: auto;
+  width: 100% !important;
+  height: 50vh !important;
 }
 
 /* snake-btn */
@@ -592,10 +591,9 @@ footer {
   }
 
   .carousel-item img {
-    height: auto;
-    min-width: 310px;
-    min-height: auto;
-  }
+    width: 100% !important;
+    height: 50vh !important;
+}
 
   .carrossel {
     padding-top: 100px;
@@ -671,11 +669,10 @@ footer {
     list-style: none;
   }
 
-  .distorção-borda {
-    height: 36vw;
-    width: 36vw;
-    margin-top: 30px;
-  }
+  .carousel-item img {
+    width: 41vh !important;
+    height: 30vh !important;
+}
 
   .gear {
     width: 27px;
