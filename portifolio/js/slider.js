@@ -19,7 +19,7 @@ function Carrossel ({callback}) {
                   aria-label="Slide 4"></button>
               </div>
                {/* slide 1  */}
-              <div className="carousel-inner shadow">
+              <div className="carousel-inner shadow d-flex">
                 <div className="carousel-item active" data-bs-interval="10000">
                   <a href="https://github.com/adammalos" target="_blank">
                     <img className="slide-img d-block w-100" src="img/porsch.jpg" alt="Primeiro slide"/>
@@ -30,7 +30,7 @@ function Carrossel ({callback}) {
                   </div>
                 </div>
                  {/* slide 2  */}
-                <div className="carousel-item" data-bs-interval="2000">
+                <div className="carousel-item d-flex" data-bs-interval="2000">
                   <a href="https://github.com/adammalos" target="_blank">
                     <img className="slide-img d-block w-100"
                       src="img/wizarding-world-legacy-link-reward-wallpaper-0eaee25c51d148b5ada70c8944b7e199.jpg"
