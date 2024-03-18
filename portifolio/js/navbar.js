@@ -36,16 +36,8 @@ function Navbar({ callback }) {
         </nav >
         </div>
     )
-    
-
 }
 
-
-
-  
   const rootElement = document.getElementById("navbar");
-  
   const root = ReactDOM.createRoot(rootElement);
   root.render(<Navbar callback={() => console.log("rendered")} />);
-
-

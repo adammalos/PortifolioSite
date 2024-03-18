@@ -4,8 +4,8 @@ for (var i = 0; i < elements.length; i++) {
     <div className="conteudo-fluid">
     <div className="row">
       <div className="header">
-        <h3 className="title">Só na Netflix</h3>
-        <div className="progress-bar"></div>
+        <h3 className="title px-5">Clique e acesse o diretório!</h3>
+        <div className="indicadores"></div>
       </div>
       <div className="conteudo">
         <button className="handle left-handle">
@@ -14,16 +14,24 @@ for (var i = 0; i < elements.length; i++) {
         <div className="slider">
           <img src="img/serie1.jpg" alt="Série 1" />
           <img src="img/serie2.jpg" alt="Série 2" />
-          <img src="img/serie3.jpg" alt="Série 3" />
-          <img src="img/serie4.jpg" alt="Série 4" />
-          <img src="img/serie5.jpg" alt="Série 5" />
-          <img src="img/serie6.jpg" alt="Série 6" />
-          <img src="img/serie7.jpg" alt="Série 7" />
-          <img src="img/serie8.jpg" alt="Série 8" />
-          <img src="img/serie9.jpg" alt="Série 9" />
-          <img src="img/serie10.jpg" alt="Série 10" />
-          <img src="img/serie11.jpg" alt="Série 11" />
-          <img src="img/serie12.jpg" alt="Série 12" />
+          <img src="img/serie1.jpg" alt="Série 3" />
+          <img src="img/serie2.jpg" alt="Série 4" />
+          <img src="img/serie1.jpg" alt="Série 5" />
+          <img src="img/serie2.jpg" alt="Série 6" />
+          <img src="img/serie1.jpg" alt="Série 7" />
+          <img src="img/serie2.jpg" alt="Série 8" />
+          <img src="img/serie1.jpg" alt="Série 9" />
+          <img src="img/serie2.jpg" alt="Série 10"/>
+          <img src="img/serie1.jpg" alt="Série 5" />
+          <img src="img/serie2.jpg" alt="Série 6" />
+          <img src="img/serie1.jpg" alt="Série 5" />
+          <img src="img/serie2.jpg" alt="Série 6" />
+          <img src="img/serie1.jpg" alt="Série 5" />
+          <img src="img/serie2.jpg" alt="Série 6" />
+          <img src="img/serie1.jpg" alt="Série 5" />
+          <img src="img/serie2.jpg" alt="Série 6" />
+          <img src="img/serie1.jpg" alt="Série 5" />
+          <img src="img/serie2.jpg" alt="Série 6" />
         </div>
         <button className="handle right-handle">
           <div className="text">&#8250;</div>
@@ -44,11 +52,11 @@ for (var i = 0; i < elements.length; i++) {
     })
     
     const throttleProgressBar = throttle(() => {
-      document.querySelectorAll(".progress-bar").forEach(calculateProgressBar)
+      document.querySelectorAll(".indicadores").forEach(calculateProgressBar)
     }, 250)
     window.addEventListener("resize", throttleProgressBar)
     
-    document.querySelectorAll(".progress-bar").forEach(calculateProgressBar)
+    document.querySelectorAll(".indicadores").forEach(calculateProgressBar)
     
     function calculateProgressBar(progressBar) {
       progressBar.innerHTML = ""
@@ -78,7 +86,7 @@ for (var i = 0; i < elements.length; i++) {
     }
     
     function onHandleClick(handle) {
-      const progressBar = handle.closest(".row").querySelector(".progress-bar")
+      const progressBar = handle.closest(".row").querySelector(".indicadores")
       const slider = handle.closest(".conteudo").querySelector(".slider")
       const sliderIndex = parseInt(
         getComputedStyle(slider).getPropertyValue("--slider-index")
