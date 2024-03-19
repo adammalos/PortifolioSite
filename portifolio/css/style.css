@@ -26,6 +26,7 @@
   font-weight:500;
   font-style: normal;
 }
+
 /* para todos os navegadores */
 ::-webkit-scrollbar {
   width: 6px;
@@ -67,6 +68,10 @@ body {
   color: var(--black) !important;
 }
 
+.primary-blue {
+  color: var(--primary-blue) !important;
+}
+
 .red {
   color: var(--red) !important;
 }
@@ -82,6 +87,10 @@ body {
 /* fundo */
 .bg-dark {
   background-color: var(--dark);
+}
+
+.bg-primary-blue {
+  background-color: var(--primary-blue);
 }
 
 .bg-black {
@@ -103,6 +112,10 @@ body {
 /* fonte */
 .font-black {
   color: var(--black);
+}
+
+.font-primary-blue {
+  color: var(--primary-blue);
 }
 
 .font-primary-white {
@@ -128,6 +141,11 @@ body {
 }
 
 /* re-use */
+.icon-s {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
 .padding-container {
   padding: 4rem;
 }
