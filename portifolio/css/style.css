@@ -1,11 +1,11 @@
 :root {
-  --yellow: #fcee09;
-  --red: #ff003c;
-  --black: #050a0e;
+  --yellow: rgb(252, 238, 10);
+  --red: #fc012a;
+  --black: #000;
   --dark: #212529;
   --primary-blue: #00f0ff;
   --second-blue: #367ca5;
-  --primary-white: #fafafa;
+  --primary-white: #ffffff;
   --green: #00a405;
 }
 
@@ -14,8 +14,17 @@
 @import url('https://fonts.cdnfonts.com/css/cyberpunk-is-not-dead');
 
 @font-face {
-  font-family: '2p';
-  src: url('fonts/PressStart2P-Regular.ttf') format('truetype');
+  font-family: '2p Regular';
+  src: url('../fonts/PressStart2P-Regular.ttf') format('truetype');
+  font-weight:500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CP Regular';
+  src: url('../fonts/CIND.ttf') format('truetype');
+  font-weight:500;
+  font-style: normal;
 }
 /* para todos os navegadores */
 ::-webkit-scrollbar {
@@ -40,6 +49,7 @@
 }
 
 body {
+  font-size: 1.25rem;
   background-color: var(--dark);
   color: var(--primary-white);
   position: relative;
@@ -53,16 +63,70 @@ body {
   color: var(--dark) !important;
 }
 
-.primary-white-color {
+.black {
+  color: var(--black) !important;
+}
+
+.red {
+  color: var(--red) !important;
+}
+
+.primary-white {
   color: var(--primary-white) !important;
 }
 
-.bg-dark {
-  background-color: var(--dark) !important;
+.yellow {
+  color: var(--yellow) !important;
 }
 
 /* fundo */
-.bg-dark
+.bg-dark {
+  background-color: var(--dark);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.bg-primary-white {
+  background-color: var(--primary-white);
+}
+
+.bg-red {
+  background-color: var(--red);
+}
+
+.bg-yellow {
+  background-color: var(--yellow);
+}
+
+/* fonte */
+.font-black {
+  color: var(--black);
+}
+
+.font-primary-white {
+  color: var(--primary-white);
+}
+
+.ruido {
+  background-image: url("../img/noise-pattern-90c709f6.png");
+  background-repeat: repeat-x;
+  position: 1.25rem 1.25rem;
+}
+
+.line {
+  background-image: url("../img/razor-bottom-red-dc130709.svg");
+  height: 1.25rem; 
+  width: 100%;
+  position:absolute;
+}
+
+.bg-gif-1 {
+  position: relative;
+  overflow: hidden;
+}
+
 /* re-use */
 .padding-container {
   padding: 4rem;
@@ -82,7 +146,7 @@ body {
 }
 
 .navbar-brand {
-  font-family: 'Cyberpunk Is Not Dead', sans-serif;
+  font-family: 'CP Regular', sans-serif;
   padding-left: 10px;
   color: white !important;
 }
@@ -91,6 +155,8 @@ body {
   position: relative;
   /* estabelece um con  o de posicionamento para a camada de imagem */
   overflow: hidden;
+  font-family: '2P Regular', sans-serif;
+  font-size: 0.8rem;
 }
 
 .nav-bg-image {
@@ -147,7 +213,7 @@ body {
 
 /* hero */
 .hero-title {
-  font-family: 'Cyberpunk Is Not Dead', sans-serif;
+  font-family: 'CP Regular', sans-serif;
   border-right: 0.4px solid white;
   height: 17rem;
   width: 60rem;
