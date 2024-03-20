@@ -8,6 +8,5 @@ function trocarImagem(id, novoSrc) {
         imagem.src = "img/site.PNG"; // Retorna ao src original quando o mouse sai da imagem imediatamente
     });
 }
-
 // Chamar a função para trocar a imagem quando o mouse estiver sobre ela para gif1
 trocarImagem("gif1", "./gifs/unknown_2024.03.18-23.06_1.gif");
