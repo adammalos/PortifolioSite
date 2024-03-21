@@ -18,11 +18,11 @@
   <!-- navbar -->
   <div id="navbar"></div>
   <!-- hero -->
-  <div class="container-custom container-fluid">
-    <div class="row">
-      <div class="col-xxl-8 mx-auto">
+  <div class="padding-x-container d-flex justify-content-center py-5">
+      <div class="">
         <section id="hero">
-          <h1 class="hero-title text-center">Adam Malos</h1>
+          <div class="hero-title text-center px-0 px-lg-5">Adam Malos</div>
+          <div>
             <ul class="hero-lista fw-bold">
               <li>Linux | Experiência com Ubuntu;</li>
               <li>SQL | Experiência com database;</li>
@@ -30,57 +30,40 @@
               <li>Python | Experiência com a linguagem.</li>
               <li>HTML | Experiência com a linguagem.</li>
               <li>CSS | Experiência com a linguagem.</li><br>
-              <ul class="text text-justify">Uma pessoa criativa,<br>
-              adepto em linguagem de programação, estrutura de banco de dados, instalação, teste e monitoramento de
-              hardware's.</ul>
             </ul>
-          <div id="eu" class="distorção-borda order-first"></div>
+          </div>
+          <div class="col-8 distorção-borda order-first"></div>
         </section>
       </div>
     </div>
-    </div>
   </div>
 
-  <div class="line"></div>
+  <div class="line-top"></div>
 <!-- projetos -->
 <div class="ruido">
-  <div class="d-flex container-caixa padding-x-container py-5">
+  <div class="container-caixa padding-x-container py-5">
     <div class="caixa col-6">
-      <a class="w-75 rounded-2 d-block mx-auto font-primary-white ratio ratio-16x9" href="https://www.youtube.com/" target="_blank">
-        <img id="gif1" class="pe-auto" src="img/site.PNG" alt="Gif 1">
+      <a class="w-75 rounded-2 d-block mx-auto font-primary-white ratio ratio-16x9" href="" target="_blank">
+        <img id="gif1" class="zoom-in" src="img/site.PNG" alt="Gif 1">
       </a>
     </div>
-    <img src="img/lines-l.svg" alt="">
-    <div class="col-6 bg-dark w-25 p-3">
+    <img class="lines-l" src="img/lines-l.svg" alt="">
+    <img class="lines-t" src="img/lines-t.svg" alt="">
+    <div class="col-6 caixa-text">
       <p class="titulo-caixa-text">
         /// .Projeto.Curso_Zika
       </p>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae officia temporibus eaque suscipit.</p>
     </div>
   </div>
+  <div class="razor-bottom-black"></div>
 </div>
 
-<div class="ruido">
-  <div class="d-flex container-caixa padding-x-container py-5">
-    <div class="caixa col-6">
-      <a class="w-75 rounded-2 d-block mx-auto font-primary-white ratio ratio-16x9" href="https://www.youtube.com/" target="_blank">
-        <img id="gif1" class="pe-auto" src="img/site.PNG" alt="Gif 1">
-      </a>
-    </div>
-    <img src="img/lines-l.svg" alt="">
-    <div class="col-6 bg-dark w-25 p-3">
-      <p class="titulo-caixa-text">
-        /// .Projeto.Curso_Zika
-      </p>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae officia temporibus eaque suscipit.</p>
-    </div>
-  </div>
-</div>
-
-  <!-- footer -->
-  <footer id="footer" class="text-center">
+<div class="line-bottom"></div>
+<!-- footer -->
+<footer id="footer" class="text-center">
     <div class="footer py-md-5">
-      <div class="footer-container container py-md-4">
+      <div class="footer-container container py-md-4 py-5">
         <ul class="footer-lista">
           <li>
             &copy; 2023 Adam Malos. Todos os direitos reservados.
@@ -103,10 +86,10 @@
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
   <script src="./js/bootstrap.bundle.min.js"></script>
-  <script src="./js/slider.js" type="text/babel"></script>
   <script src="./js/navbar.js" type="text/babel"></script>
+  <script src="./js/slider.js" type="text/babel"></script>
   <script src="./js/carrossel.js" type="text/babel"></script>
   <script src="./js/gif.js" type="text/babel"></script>
-  <script src="./js/animacao.js" type="text/babel"></script>
+  <!-- <script src="./js/animacao.js" type="text/babel"></script> -->
 </body>
 </html>
