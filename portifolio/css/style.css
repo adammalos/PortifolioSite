@@ -27,6 +27,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'BlenderPro Regular';
+  src: url('../fonts/BlenderPro-Book.ttf');
+  font-weight: 500;
+  font-style: normal;  
+}
+
 /* para todos os navegadores */
 ::-webkit-scrollbar {
   width: 6px;
@@ -50,8 +57,9 @@
 }
 
 body {
+  font-family: 'BlenderPro Regular', sans-serif;
   font-size: 1.25rem;
-  background-color: var(--dark);
+  background-color: var(--black);
   color: var(--primary-white);
   position: relative;
   overflow-x: hidden;
@@ -112,6 +120,10 @@ body {
   color: var(--black);
 }
 
+.font-yellow {
+  color: var(--yellow);
+}
+
 .font-primary-blue {
   color: var(--primary-blue);
 }
@@ -122,19 +134,19 @@ body {
 
 .ruido {
   background-image: url("../img/noise-pattern-90c709f6.png");
-  background-repeat: repeat-x;
+  background-repeat: repeat;
   position: 1.25rem 1.25rem;
 }
 
 .line-top {
-  background-image: url("../img/razor-top-dark.svg");
-  height: 1.25rem; 
+  background-image: url("../img/razor-module.svg");
+  height: 2.25rem; 
   width: 100%;
   position:absolute;
 }
 
 .mission {
-  background-image: url("../img/mission.svg");
+  background-image: url("../img/razor-bottom-black\ 2.svg");
   bottom: 0;
   height: 48px;
   left: 0;
@@ -157,6 +169,16 @@ body {
 .titulo-caixa-text {
   font-size: 1.50rem;
   font-weight: 700;
+}
+
+.modulo {
+  padding-left: 1rem;
+  color: var(--yellow);
+  position: inherit;
+  height: 0vh;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1rem;
 }
 
 /* lines */
@@ -447,7 +469,7 @@ footer ul {
 }
 
 .caixa {
-  background-color: var(--yellow);
+  background-color: var(--red);
   border: var(--primary-blue) solid 2px;
   padding-top: 1rem;
   padding-bottom: 1rem;
