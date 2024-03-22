@@ -56,4 +56,5 @@ function Navbar({ callback }) {
 }
 
 const rootElement = document.getElementById("navbar");
-ReactDOM.render(<Navbar />, rootElement);
+const root = ReactDOM.createRoot(rootElement);
+root.render(<Navbar />);

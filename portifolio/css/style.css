@@ -284,13 +284,13 @@ body {
   animation: animação-distorção 20s linear infinite;
 }
 
-#hero,.glitch {
-  animation: glitch-animation 0.6s linear 0s;
-}
-
 #hero {
   display: flex;
   align-items: center;
+}
+
+.glitch {
+  animation: glitch-animation 0.6s linear;
 }
 
 #hero h1 {
