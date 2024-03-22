@@ -14,13 +14,6 @@
 @import url('https://fonts.cdnfonts.com/css/cyberpunk-is-not-dead');
 
 @font-face {
-  font-family: '2p Regular';
-  src: url('../fonts/PressStart2P-Regular.ttf') format('truetype');
-  font-weight:500;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'CP Regular';
   src: url('../fonts/CIND.ttf') format('truetype');
   font-weight:500;
@@ -34,26 +27,14 @@
   font-style: normal;  
 }
 
-/* para todos os navegadores */
-::-webkit-scrollbar {
-  width: 6px;
-  /* largura da scrollbar */
-  border-radius: 10px;
-  /* borda arredondada */
+.box-scrool::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-blue);
+  border-radius: 20px;
+  border: 4px solid var(--black);
 }
 
-::-webkit-scrollbar-track {
-  background-color: transparent;
-  /* cor do fundo da track */
-  border-radius: 10px;
-  /* borda arredondada */
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #ffffff, #537e89);
-  /* gradiente de cores */
-  border-radius: 10px;
-  /* borda arredondada */
+.box-scrool::-webkit-scrollbar, body::-webkit-scrollbar {
+  width: 12px;
 }
 
 body {
@@ -155,9 +136,10 @@ body {
 }
 
 .line-bottom {
-  background-image: url("../img/razor-top-blue.svg");
-  height: 1.25rem; 
+  background-image: url("../img/razor-bottom-black\ 3.svg");
+  height: 2.25rem; 
   width: 100%;
+  position: absolute;
 }
 
 .bg-gif-1 {
@@ -212,6 +194,11 @@ body {
   color: rgb(255, 255, 255) !important;
 }
 
+.navbar-scrolled {
+  background-color:var(--black);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
 .nav-link:hover {
   color: rgb(136, 197, 240) !important;
 }
@@ -223,26 +210,17 @@ body {
 }
 
 .navbar {
-  position: relative;
-  /* estabelece um con  o de posicionamento para a camada de imagem */
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
   overflow: hidden;
-  font-family: '2P Regular', sans-serif;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  z-index: 10000; /* Definindo um valor alto para garantir que a barra de navegação fique no topo */
 }
 
-.nav-bg-image {
-  position: absolute;
-  /* retira a imagem do fluxo normal da página */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  /* posiciona a camada da imagem atrás do conteúdo da navbar */
-  background-image: url('../img/porsch.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: blur(10px) brightness(75%);
+.navbar.scrolled {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.544), rgba(0, 0, 0, 0)); 
 }
 
 .nav-icon-linkedin {
@@ -435,7 +413,9 @@ footer ul {
 }
 
 .footer {
+  background-image: url('../img/noise-pattern-90c709f6.png');
   background-color: var(--primary-blue);
+  margin-top: 1rem;
 }
 
 .footer-lista li {
@@ -470,7 +450,7 @@ footer ul {
 
 .caixa {
   background-color: var(--red);
-  border: var(--primary-blue) solid 2px;
+  border: var(--primary-blue) double 2px;
   padding-top: 1rem;
   padding-bottom: 1rem;
   width: 25%;
