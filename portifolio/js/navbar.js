@@ -32,7 +32,7 @@ function Navbar({ callback }) {
                                 <a className="nav-link active" aria-current="page" href="index.html">Início</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="intuito.html">Intuito</a>
+                                <a className="nav-link" href="intuito.html" target="_blank">Intuito</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#footer">Contato</a>

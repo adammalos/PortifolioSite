@@ -4,6 +4,7 @@
   --black: #000;
   --dark: #212529;
   --primary-blue: #00f0ff;
+  --primary-blue-transparent: #00eeff00;
   --second-blue: #367ca5;
   --primary-white: #ffffff;
   --green: #00a405;
@@ -46,9 +47,26 @@ body {
   overflow-x: hidden;
 }
 
+.conf {
+  background-color: var(--dark);
+  color: transparent;
+  cursor: pointer;
+  user-select: none
+}
+
+.conf-2 {
+  background-color: var(--black);
+  color: var(--primary-white);
+  transition: ease 1s;
+}
+
 /* cores */
 .dark {
   color: var(--dark) !important;
+}
+
+.primary-blue-transparent {
+  color: var(--primary-blue-transparent) !important;
 }
 
 .black {
@@ -99,6 +117,10 @@ body {
 /* fonte */
 .font-black {
   color: var(--black);
+}
+
+.font-dark {
+  color: var(--dark);
 }
 
 .font-yellow {
@@ -276,12 +298,13 @@ body {
 }
 
 .distorção-borda {
-  background-image: url(../img/eu.jpg);
+  background-image: url(../img/eu-sem-fundo.png);
   background-size: cover;
   background-position: center;
-  height: 15rem;
+  height: 17rem;
   width: 20rem;
   animation: animação-distorção 20s linear infinite;
+  border: solid 1px var(--black);
 }
 
 #hero {
@@ -561,4 +584,8 @@ footer ul {
   .hero-title {
     font-size: 4.25rem;
   }
+  .distorção-borda {
+    height: 11rem;
+    width: 13rem;
+}
 }

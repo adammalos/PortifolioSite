@@ -10,34 +10,25 @@
     border-radius: 50%;
     cursor: pointer;
     z-index: 10001;
+    animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    box-shadow: 0 0 0 0 var(--primary-blue);
 }
 
 .toggle-sound.sound-mute {
     box-shadow: none;
+    animation: blink 2s linear infinite both;
+    animation-delay: 0s;
 }
 
-@-webkit-keyframes pulse {
-    to {
-        box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
-    }
-}
+.musica {
+    z-index: 10000;
 
-@-moz-keyframes pulse {
-    to {
-        box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
-    }
-}
-
-@-ms-keyframes pulse {
-    to {
-        box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
-    }
-}
-
-@keyframes pulse {
-    to {
-        box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
-    }
+    background-color: var(--black);
+    position: fixed;
+    right: 12px;
+    top: 68px;
+    font-size: small;
+    margin-top: 2rem;
 }
 
 .sound {
@@ -109,5 +100,4 @@
     opacity: 0;
     transform: translateX(-46%);
     height: 20%;
-
 }
