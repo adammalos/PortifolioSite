@@ -1,6 +1,19 @@
+// Evento para quando a página perde o foco
+window.addEventListener('blur', function() {
+  // Verifica se o botão de mute não está em modo mudo
+  var toggleButton = document.getElementById('toggleSoundButton');
+  if (!toggleButton.classList.contains('sound-mute')) {
+      // Simula um clique no botão de mute
+      toggleButton.click();
+  }
+});
+
 // Adiciona a classe 'glitch' inicialmente
 var hero = document.getElementById("hero");
 hero.classList.add("glitch");
+
+// Variável para controlar se o glitchSound deve ser reproduzido ou não
+var shouldPlayGlitchSound = false;
 
 // Ativa a função a cada x segundos
 setInterval(toggleGlitch, 6000);
@@ -18,9 +31,10 @@ function toggleGlitch() {
 
   // Verifica se a classe 'glitch' está presente
   if (hero.classList.contains("glitch")) {
-    var glitchSound = document.getElementById("glitchSound");
-    var cyberpunkSound = document.getElementById("cyberpunkSound");
+    shouldPlayGlitchSound = true; // Define para reproduzir o glitchSound
     toggleAudio(); // Chama a função para pausar ou reproduzir os áudios imediatamente
+  } else {
+    shouldPlayGlitchSound = false; // Define para não reproduzir o glitchSound
   }
 }
 
@@ -34,9 +48,12 @@ function toggleAudio() {
     glitchSound.pause(); // Pausa o áudio
     cyberpunkSound.pause(); // Pausa o áudio
   } else {
-    glitchSound.play(); // Reproduz o áudio
+    // Reproduz o áudio apenas se a variável shouldPlayGlitchSound for verdadeira
+    if (shouldPlayGlitchSound) {
+      glitchSound.play(); // Reproduz o áudio
+      glitchSound.volume = 0.03;
+    }
     cyberpunkSound.play(); // Reproduz o áudio
-    glitchSound.volume = 0.03;
-      cyberpunkSound.volume = 0.04; 
+    cyberpunkSound.volume = 0.04; 
   }
 }
