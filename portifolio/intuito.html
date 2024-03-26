@@ -14,11 +14,38 @@
 </head>
 
 <body>
+  <!-- mute -->
+  <div id="toggleSoundButton" class="unmuted toggle-sound sound-mute">
+    <div class="tooltip--left sound" data-tooltip="Turn On/Off Sound">
+      <div class="sound--icon fa fa-volume-off"></div>
+      <div class="sound--wave sound--wave_one"></div>
+      <div class="sound--wave sound--wave_two"></div>
+      <div class="sound--wave sound--wave_three"></div>
+    </div>
+  </div>
+  <p class="musica">.música.</p>
+  <!-- cyberpunk-music -->
+  <audio id="cyberpunkSound">
+    <source src="./sound/cyberpunk.mp3" type="audio/mpeg" auto-play>
+    Your browser does not support the audio element.
+  </audio>
+  <!-- glitch-sound-effect -->
+  <audio id="glitchSound">
+    <source src="./sound/glitch-sound-effect.mp3" type="audio/mpeg" auto-play>
+    Your browser does not support the audio element.
+  </audio>
   <!-- navbar -->
   <div id="navbar"></div>
-  <div id="intuito"></div>
+<!-- hero -->
+<div id="inicio" class="padding-x-container d-flex justify-content-center py-5 font-primary-white bg-black">
+  <div class="">
+    <section id="hero">
+      <div class="page-title text-center px-0 px-lg-5">/// CONFIDENCIAL</div>
+    </section>
+  </div>
+</div>
   <!-- projetos -->
-  <p class="modulo pt-5">
+  <p class="modulo">
     /// MÓDULO.INTUITO
     <br>
     carregando...
@@ -40,11 +67,9 @@
       </div>
     </div>
   </div>
-
-
-  <div class="line-bottom"></div>
+    <div class="line-bottom"></div>
   <!-- footer -->
-  <footer id="">
+  <footer id="footer">
     <div class="footer py-md-5">
       <div class="footer-container container py-md-4 py-5">
         <ul class="footer-lista">
@@ -62,8 +87,11 @@
         </ul>
       </div>
     </div>
-
   </footer>
+
+
+
+  
 
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
@@ -72,6 +100,7 @@
   <script src="./js/navbar.js" type="text/babel"></script>
   <script src="./js/jquery.min.js" type="text/babel"></script>
   <script src="./js/remove.js" type="text/babel"></script>
+  <script src="./js/animacao.js" type="text/babel"></script>
 </body>
 
 </html>
