@@ -214,13 +214,17 @@ body {
   padding-left: 4rem;
 }
 
-.nav-link {
-  color: rgb(255, 255, 255) !important;
-}
-
 .navbar-scrolled {
   background-color:var(--black);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-item a.active {
+  color: var(--primary-blue) !important;
+}
+
+.nav-link {
+  color: var(--primary-white);
 }
 
 .nav-link:hover {
@@ -250,6 +254,7 @@ body {
 .nav-icon-linkedin {
   display: flex;
   padding-right: 20px;
+  padding-left: 20px;
   filter: invert(1);
   /* inverte as cores da imagem, tornando-a branca */
   transition: all 0.2s ease-in-out;
@@ -267,12 +272,11 @@ body {
 
 .nav-icon-insta {
   display: flex;
-  width: 40px;
-  padding-right: 20px;
   filter: invert(1);
   /* inverte as cores da imagem, tornando-a branca */
   transition: all 0.2s ease-in-out;
   /* adiciona uma transição suave */
+  padding-right: 10px;
 }
 
 .nav-icon-insta img {
@@ -586,5 +590,9 @@ footer ul {
   .distorção-borda {
     height: 11rem;
     width: 13rem;
+}
+.nav-icon-linkedin {
+  padding-right: 7px;
+  padding-left: 0;
 }
 }

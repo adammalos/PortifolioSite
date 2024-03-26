@@ -1,4 +1,4 @@
-function Navbar({ callback }) {
+function Navbar() {
     const navEL = React.useRef(null);
 
     React.useEffect(() => {
@@ -10,10 +10,20 @@ function Navbar({ callback }) {
             }
         };
 
+        const handleNavLinkClick = (event) => {
+            const navLinks = navEL.current.querySelectorAll('.nav-item a');
+            navLinks.forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+        };
+
+        const navLinks = navEL.current.querySelectorAll('.nav-item a');
+        navLinks.forEach(link => link.addEventListener('click', handleNavLinkClick));
+
         window.addEventListener('scroll', handleScroll);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            navLinks.forEach(link => link.removeEventListener('click', handleNavLinkClick));
         };
     }, []);
 
@@ -29,12 +39,12 @@ function Navbar({ callback }) {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="index.html">Início</a>
+                                <a id="link-1" className="nav-link active" aria-current="page" href="index.html">Início</a>
                             </li>
-                            <li className="nav-item">
+                            <li id="link-2" className="nav-item">
                                 <a className="nav-link" href="intuito.html" target="_blank">Intuito</a>
                             </li>
-                            <li className="nav-item">
+                            <li id="link-3" className="nav-item">
                                 <a className="nav-link" href="#footer">Contato</a>
                             </li>
                         </ul>
