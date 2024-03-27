@@ -213,11 +213,6 @@ body {
   padding-left: 4rem;
 }
 
-.navbar-scrolled {
-  background-color:var(--black);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-}
-
 .nav-item a.active {
   color: var(--primary-blue) !important;
 }
@@ -246,7 +241,7 @@ body {
   z-index: 10000; /* Definindo um valor alto para garantir que a barra de navegação fique no topo */
 }
 
-.navbar.scrolled {
+.scrolled {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.544), rgba(0, 0, 0, 0)); 
 }
 
