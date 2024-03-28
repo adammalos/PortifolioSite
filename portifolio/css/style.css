@@ -115,6 +115,12 @@ body {
   background-color: var(--yellow);
 }
 
+.bg-dots {
+  background-image: url(../img/dots.png);
+  background-repeat: repeat;
+  background-position: 20px, 50% center;
+}
+
 /* fonte */
 .font-black {
   color: var(--black);
@@ -297,10 +303,11 @@ body {
 .hero-lista {
   font-size: 1.50rem;
   margin-top: 1rem;
+  font-weight: 800;
 }
 
-.text {
-  display: flex;
+.line-height-0 {
+  line-height: 0;
 }
 
 .distorção-borda {
@@ -310,12 +317,13 @@ body {
   height: 17rem;
   width: 20rem;
   animation: animação-distorção 20s linear infinite;
-  border: solid 1px var(--black);
+  border: solid 5px var(--black);
 }
 
 #hero {
   display: flex;
   align-items: center;
+  border: solid;
 }
 
 .glitch {
