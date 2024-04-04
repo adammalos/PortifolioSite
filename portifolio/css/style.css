@@ -304,6 +304,7 @@ body {
   font-size: 1.50rem;
   margin-top: 1rem;
   font-weight: 800;
+  text-align: center;
 }
 
 .line-height-0 {
@@ -317,13 +318,12 @@ body {
   height: 17rem;
   width: 20rem;
   animation: animação-distorção 20s linear infinite;
-  border: solid 5px var(--black);
+  border: solid 2px var(--dark);
 }
 
 #hero {
   display: flex;
   align-items: center;
-  border: solid;
 }
 
 .glitch {
@@ -516,6 +516,7 @@ footer ul {
 
   .page-title {
     font-size: 2.25rem;
+    padding-top: 2rem;
   }
 
   .container-caixa {

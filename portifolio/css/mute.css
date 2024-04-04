@@ -1,7 +1,7 @@
 .toggle-sound {
     position: fixed;
     right: 1rem;
-    top: 4rem;
+    top: 3rem;
     background-color: var(--dark);
     width: 35px;
     height: 33px;
@@ -22,11 +22,10 @@
 
 .musica {
     z-index: 10000;
-
     background-color: var(--black);
     position: fixed;
     right: 12px;
-    top: 68px;
+    top: 52px;
     font-size: small;
     margin-top: 2rem;
 }
@@ -101,3 +100,10 @@
     transform: translateX(-46%);
     height: 20%;
 }
+
+@media (max-width: 576px){
+    .musica {
+        right: 53px;
+        top: 24px;
+    }
+    }
