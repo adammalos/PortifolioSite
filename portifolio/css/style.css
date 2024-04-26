@@ -150,9 +150,22 @@ body {
 
 .line-top {
   background-image: url("../img/razor-module.svg");
+  background-size: auto;
   height: 2.25rem; 
   width: 100%;
   position: static;
+}
+
+.pointer {
+  position: absolute;
+  color: var(--primary-blue);
+  font-size: 1.5rem;
+  right: 6px;
+  bottom: 3px;
+  transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
 }
 
 .mission {
@@ -484,6 +497,7 @@ footer ul {
 }
 
 .caixa {
+  position: relative;
   background-color: var(--red);
   border: var(--primary-blue) double 2px;
   padding-top: 1rem;
